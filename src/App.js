@@ -5,6 +5,8 @@ import logo from "./logo.svg"
 import Footer from "./components/Footer/Footer";
 import {routes} from "./data/routes"
 import {userMenuOptions} from "./data/user_menu_options";
+import ContentContainer from "./components/ContentContainer/ContentContainer";
+import ProjectTeam from "./pages/ProjectTeam/ProjectTeam";
 
 function App() {
     return (
@@ -25,6 +27,7 @@ function App() {
             {/*  </a>*/}
             {/*</header>*/}
             {/*<div style={{height: 3000}}>TesteABC</div>*/}
+            <ProjectTeam/>
             <Footer routes={routes}/>
         </div>
     );

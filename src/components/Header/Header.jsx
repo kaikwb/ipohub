@@ -28,13 +28,13 @@ export default function Header(props) {
     }, []);
 
     return (
-        <header className="header-div">
+        <div className="header-div">
             <Paper elevation={0} sx={headerBackground}>
                 <img id="header-background" className="header-img-background" src={props.headerImageBackground} alt="Header background"/>
                 <img className="header-img-logo" src={props.headerLogo} alt="Logo"/>
             </Paper>
             <HeaderMenu menuOptions={props.routes} userMenuOptions={props.userMenuOptions}
-                        logoImage={props.headerLogo} headerMenuPosition={fixHeaderMenu ? "fixed" : "static"}/>
-        </header>
+                        logoImage={props.headerLogo} headerMenuPosition={fixHeaderMenu ? "sticky" : "static"}/>
+        </div>
     );
 }

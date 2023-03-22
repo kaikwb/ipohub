@@ -8,7 +8,7 @@ export default function Footer(props) {
     const backgroundColor = theme.palette.primary.main;
 
     return (
-        <footer style={{marginTop: "auto"}}>
+        <footer style={{marginTop: "auto", width: "100%"}}>
             <Container maxWidth="false" sx={{backgroundColor: backgroundColor, color: color, py: 1}}>
                 <Typography textAlign="center" sx={{display: {xs: "none", md: "block"}}}>Av. Paulista, 1106 / Edifício Paulista, 1100 – 4º, 5º, 6º e 7º andares</Typography>
                 <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{height: 70}}>

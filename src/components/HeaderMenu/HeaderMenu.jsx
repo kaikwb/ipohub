@@ -113,7 +113,7 @@ export default function HeaderMenu(props) {
 
     return (
         <>
-            <AppBar position={props.headerMenuPosition} sx={{position: {xs: "fixed", md: props.headerMenuPosition}}}>
+            <AppBar position={props.headerMenuPosition} sx={{position: {xs: "sticky", md: props.headerMenuPosition}}}>
                 <Container maxWidth="x1">
                     <Toolbar disableGutters>
                         <Slide in={!hideAppBarLogo} direction="right">

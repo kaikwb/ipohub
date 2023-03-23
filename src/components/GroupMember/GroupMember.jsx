@@ -1,8 +1,6 @@
-import {Card, CardContent, CardHeader, Divider, Typography, useTheme} from "@mui/material";
+import {Card, CardContent, CardHeader, Divider, Typography} from "@mui/material";
 
 export default function GroupMember(props) {
-    const theme = useTheme();
-
     return (
         <Card sx={{backgroundColor: "lightgray"}}>
             <CardHeader title={props.name}></CardHeader>

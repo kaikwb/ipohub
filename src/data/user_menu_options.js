@@ -1,6 +1,5 @@
 export const userMenuOptions = {
-    "Profile": "/profile",
-    "Account": "/account",
-    "Dashboard": "/dashboard",
+    "Perfil": "/profile",
+    "Configurações": "/settings",
     "Logout": "/logout"
 };

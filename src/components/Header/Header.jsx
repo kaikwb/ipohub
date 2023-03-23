@@ -34,7 +34,7 @@ export default function Header(props) {
                 <img className="header-img-logo" src={props.headerLogo} alt="Logo"/>
             </Paper>
             <HeaderMenu menuOptions={props.routes} userMenuOptions={props.userMenuOptions}
-                        logoImage={props.headerLogo} headerMenuPosition={fixHeaderMenu ? "sticky" : "static"}/>
+                        logoImage={props.headerLogo} headerMenuPosition={fixHeaderMenu ? "fixed" : "static"}/>
         </div>
     );
 }

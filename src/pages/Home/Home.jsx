@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Card, CardActions, CardContent, Container, Grid, Link, Typography} from "@mui/material";
+import {Button, Card, CardActions, CardContent, Grid, Link, Typography} from "@mui/material";
 
 function PageCard(props) {
     return (
@@ -28,7 +28,8 @@ function Home() {
                 <Card>
                     <CardContent sx={{textAlign: "center"}}>
                         <Typography variant="h2">O seu HUB sobre IPO</Typography>
-                        <Typography variant="body1" sx={{mt: 2}}>Aqui você fica sabendo tudo sobre IPO e fica ligando em tudo o que
+                        <Typography variant="body1" sx={{mt: 2}}>Aqui você fica sabendo tudo sobre IPO e fica ligando em
+                            tudo o que
                             os especialista dizem para não perder a melhor oportunidade de lucrar.</Typography>
                     </CardContent>
                 </Card>

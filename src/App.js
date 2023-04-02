@@ -9,21 +9,24 @@ import Home from "./pages/Home/Home";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProjectTeam from "./pages/ProjectTeam/ProjectTeam";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import background from "./background.svg"
+import Reviews from "./pages/Reviews/Reviews";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" style={{backgroundImage: `url(${background})`, backgroundSize: "cover"}}>
             <BrowserRouter>
-                <Header headerImageBackground={forex} headerLogo={logo} routes={routes}
+                <Header id="header" headerImageBackground={forex} headerLogo={logo} routes={routes}
                         userMenuOptions={userMenuOptions}/>
                 <div id="content">
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/team" element={<ProjectTeam/>}/>
                         <Route path="/about_us" element={<AboutUs/>}/>
+                        <Route path="/reviews" element={<Reviews/>}/>
                     </Routes>
                 </div>
-                <Footer routes={routes}/>
+                <Footer id="footer" routes={routes}/>
             </BrowserRouter>
         </div>
     );

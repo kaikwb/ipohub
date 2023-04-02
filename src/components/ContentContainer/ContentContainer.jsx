@@ -7,7 +7,7 @@ const titleStyle = {
 };
 export default function ContentContainer(props) {
     return (
-        <Paper elevation={8} sx={{width: {xs: "100%", md: 600}, my: 2, flexGrow: 1, p: 2}}>
+        <Paper elevation={8} sx={{width: {xs: 1, md: 600}, my: 2, flexGrow: 1, p: 2}}>
             {(() => {
                 if (!props.title) return null;
 

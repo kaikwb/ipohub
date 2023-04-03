@@ -11,6 +11,7 @@ import ProjectTeam from "./pages/ProjectTeam/ProjectTeam";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import background from "./background.svg"
 import Reviews from "./pages/Reviews/Reviews";
+import Videos from "./pages/Videos/Videos";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/team" element={<ProjectTeam/>}/>
                         <Route path="/about_us" element={<AboutUs/>}/>
                         <Route path="/reviews" element={<Reviews/>}/>
+                        <Route path="/videos" element={<Videos/>}/>
                     </Routes>
                 </div>
                 <Footer id="footer" routes={routes}/>

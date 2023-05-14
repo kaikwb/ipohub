@@ -16,9 +16,9 @@ function createMarkup(htmlString) {
     return parse(htmlString, options);
 }
 
-async function getReviews() {
+async function getArticles() {
     try {
-        const response = await axios.get('/webapi/reviews');
+        const response = await axios.get('/webapi/articles');
         return response.data;
     } catch (error) {
         console.error(error);
@@ -28,7 +28,7 @@ async function getReviews() {
 function PageContent(props) {
     const [open, setOpen] = useState(false);
     const [selectedReview, setSelectedReview] = useState(null);
-    const [reviews, setReviews] = useState([]);
+    const [articles, setArticles] = useState([]);
 
     const style = {
         position: 'absolute',
@@ -55,8 +55,8 @@ function PageContent(props) {
 
     useEffect(() => {
         async function fetchData() {
-            const result = await getReviews();
-            setReviews(result);
+            const result = await getArticles();
+            setArticles(result);
         }
 
         fetchData();
@@ -64,18 +64,18 @@ function PageContent(props) {
 
     return (
         <Grid container columns={1} spacing={2} direction="column">
-            {reviews?.map((review) => {
+            {articles?.map((article) => {
                 return (
-                    <Grid item key={review.title} onClick={() => handleOpen(review)}>
+                    <Grid item key={article.title} onClick={() => handleOpen(article)}>
                         <Card sx={{backgroundColor: "lightgray"}}>
                             <CardActionArea>
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
-                                        {review.title}
+                                        {article.title}
                                     </Typography>
                                     <Divider/>
                                     <Typography variant="body2" color="text.secondary" sx={{mt: 1}}>
-                                        {`Por: ${review.author}`}
+                                        {`Por: ${article.author}`}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -104,8 +104,8 @@ function PageContent(props) {
     );
 }
 
-export default function Reviews(props) {
+export default function Articles(props) {
     return (
-        <ContentContainer title="Análises" bodyContent={<PageContent/>}/>
+        <ContentContainer title="Artigos" bodyContent={<PageContent/>}/>
     );
 }

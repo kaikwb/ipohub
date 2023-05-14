@@ -13,6 +13,7 @@ import background from "./background.svg"
 import Reviews from "./pages/Reviews/Reviews";
 import Videos from "./pages/Videos/Videos";
 import Signup from "./pages/Signup/Signup";
+import Articles from "./pages/Texts/Articles";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/reviews" element={<Reviews/>}/>
                         <Route path="/videos" element={<Videos/>}/>
                         <Route path="/signup" element={<Signup/>}/>
+                        <Route path="/articles" element={<Articles/>}/>
                     </Routes>
                 </div>
                 <Footer id="footer" routes={routes}/>

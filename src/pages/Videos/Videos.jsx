@@ -1,11 +1,21 @@
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
-import {videos} from '../../data/videos';
 import {Box, Card, CardActionArea, CardContent, CardMedia, Divider, Grid, Modal, Typography} from "@mui/material";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+
+async function getVideos() {
+    try {
+        const response = await axios.get('/webapi/videos');
+        return response.data;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 function PageContent(props) {
     const [open, setOpen] = useState(false);
     const [selectedVideo, setSelectedVideo] = useState(null);
+    const [videos, setVideos] = useState([]);
 
     const style = {
         position: 'absolute',
@@ -30,9 +40,18 @@ function PageContent(props) {
         setOpen(false);
     }
 
+    useEffect(() => {
+        async function fetchData() {
+            const result = await getVideos();
+            setVideos(result);
+        }
+
+        fetchData();
+    }, []);
+
     return (
         <Grid container columns={1} spacing={2} direction="column">
-            {videos.map((video) => {
+            {videos?.map((video) => {
                 return (
                     <Grid item key={video.title} onClick={() => handleOpen(video)}>
                         <Card sx={{backgroundColor: "lightgray"}}>

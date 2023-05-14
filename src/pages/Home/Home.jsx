@@ -38,9 +38,9 @@ function Home() {
             <Grid item container columns={3} spacing={3}>
                 <PageCard title="Videos" description="Assista os melhores conteúdos sobre IPO" link="/videos"
                           linkButtonDescription="Assista agora"/>
-                <PageCard title="Materiais"
-                          description="Leia os materias repletos de detalhes e explicações de como funciona os IPO"
-                          link="/texts" linkButtonDescription="Leia agora"/>
+                <PageCard title="Artigos"
+                          description="Leia artigos repletos de detalhes e explicações de como funciona os IPO"
+                          link="/articles" linkButtonDescription="Leia agora"/>
                 <PageCard title="Análises" description="Veja as análises dos especialistas sobre os próximos IPO"
                           link="/reviews" linkButtonDescription="Veja agora"/>
             </Grid>
